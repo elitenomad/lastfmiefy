@@ -1,8 +1,6 @@
 # Lastfmiefy
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/lastfmiefy`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A Ruby gem for Last.fm Web Services(v2.0)
 
 ## Installation
 
@@ -22,7 +20,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    To fetch artists
+           Lastfmiefy::Client::Core.artists('YOUR_API_KEY',{ country: 'spain' })
+    To fetch albums
+           Lastfmiefy::Client::Core.albums('YOUR_API_KEY',{ country: 'rj' ] })
 
 ## Development
 
@@ -30,13 +31,27 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
+## Test
+    bundle exec rspec spec/
+
 ## compromises/shortcuts
+
     Authentication is not implemented as the two API's in challenge don't require one as per the last.fm documentation
     Assumes and handles only one format (JSON in this case)
+    Gem implements only two webservice methods buts extendable to all the methods exposed by last.fm webservice.
 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/lastfmiefy.
+
+## Pre-requisites
+    Ruby (2.1.0, 2.2.1, 2.4.1)
+
+## Local setup
+    a) git clone https://github.com/elitenomad/lastfmiefy.git
+    b) cd lastfmiefy
+    c) bundle install
+    d) To runs specs, bundle exec rspec spec/
 
 ## License
 
