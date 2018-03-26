@@ -17,7 +17,7 @@ RSpec.configure do |config|
 
   config.before(:each) do
     stub_request(:get, /ws.audioscrobbler.com/).
-        with(headers: {'Accept'=>'*/*', 'User-Agent'=>'rest-client/2.0.2 (darwin14.5.0 x86_64) ruby/2.2.4p230'}).
+        with(headers: {'Accept'=>'*/*', 'User-Agent'=>/ruby/}).
         to_return(status: 200, body: '{ "name":"John", "age":30, "city":"New York"}', headers: {})
   end
 end

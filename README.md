@@ -23,7 +23,7 @@ Or install it yourself as:
     To fetch artists
            Lastfmiefy::Client::Core.artists('YOUR_API_KEY',{ country: 'spain' })
     To fetch albums
-           Lastfmiefy::Client::Core.albums('YOUR_API_KEY',{ country: 'rj' ] })
+           Lastfmiefy::Client::Core.albums('YOUR_API_KEY',{ artist: 'cher'  })
 
 ## Development
 
